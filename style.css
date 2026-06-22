@@ -1,0 +1,87 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+:root{
+  --bg1:#0f172a;
+  --bg2:#071028;
+  --accent:#ff6b6b;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(135deg,var(--bg1),var(--bg2));
+  color:#e6eef8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2rem;
+}
+
+#joke-container{
+  width:100%;
+  max-width:720px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.04);
+  border-radius:16px;
+  padding:2.25rem;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+  backdrop-filter: blur(6px);
+  text-align:center;
+}
+
+h1{
+  margin:0 0 1rem;
+  font-size:1.5rem;
+  letter-spacing:0.4px;
+  font-weight:700;
+  color:#ffffff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:0.6rem;
+}
+
+h1::before{content:'😂'; font-size:1.2rem; transform:translateY(-1px)}
+
+#btn{
+  appearance:none;
+  border:0;
+  background: linear-gradient(90deg,var(--accent),#ffa94d);
+  color:#081124;
+  padding:0.8rem 1.2rem;
+  border-radius:999px;
+  font-weight:600;
+  cursor:pointer;
+  transition:transform .18s ease, box-shadow .18s ease;
+  box-shadow: 0 6px 18px rgba(255,107,107,.12);
+  margin-top:1rem;
+}
+#btn:hover{transform:translateY(-3px); box-shadow: 0 12px 30px rgba(255,107,107,.16);}
+#btn:active{transform:translateY(-1px) scale(.99);}
+
+#jokeresults, #jokeresults2{
+  margin:1rem 0;
+  padding:1rem;
+  background: rgba(255,255,255,0.02);
+  border-radius:12px;
+  color:#dbeafe;
+  line-height:1.5;
+  font-size:1.05rem;
+  min-height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  transition:all .25s ease;
+}
+
+#jokeresults2{margin-top:.5rem; font-weight:600; color:#ffedcc; background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,165,80,0.02));}
+
+@media (max-width:480px){
+  #joke-container{padding:1.25rem}
+  h1{font-size:1.1rem}
+  #btn{width:100%; padding:0.9rem}
+}
+
